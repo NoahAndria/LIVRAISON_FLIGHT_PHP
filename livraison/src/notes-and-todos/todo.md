@@ -1,0 +1,11 @@
+CRUD: create, read, update, delete
+- create
+  - form + ajout d'image (c.f old projects) [ok]
+  - action: addhandler [ok]
+  - nom, prix, image, description [ok]
+  - get the value of each one of them [wip]
+  - handle it in the controller (function addProduct(nom, prix, image, desc))
+  - method of the class Produit: add(db()) to add this product in the table (to be used in the controller)
+- read [ok]
+- update
+- delete
