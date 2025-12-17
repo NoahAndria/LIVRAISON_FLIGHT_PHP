@@ -41,7 +41,9 @@ $router->group('', function(Router $router) use ($app) {
 	$router->get('/add', function() use ($app) {
 		$app->render('add');
 	});
-
+	$router->get('/ajout_livraison', function() use ($app) {
+		$app->render('ajout_livraison');
+	});
 	$router->group('/api', function() use ($router) {
 		$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);
 		$router->get('/users/@id:[0-9]', [ ApiExampleController::class, 'getUser' ]);

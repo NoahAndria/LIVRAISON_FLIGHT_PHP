@@ -15,6 +15,7 @@
     - nombre de produits dans le coli
   -  [wip] creation de livraison [fitiavana]
     - coli: ajout de +eurs produits
+     -> liste de tous les produits (quantite + ajouter au coli)
     - entrepot depart: dropdown
     - adr_destination: input text
     - etat: automatiquement en attente a la creation
@@ -28,6 +29,7 @@
     - affichage de tous les produits
     - avec les autres details (entrepot, adr_destination, etat)
 - fonctions:
+  - getAllProducts
   - getAllLivraison [noah]
   - saveLivraison [fitiavana]
   - modifyLivraison [noah]
