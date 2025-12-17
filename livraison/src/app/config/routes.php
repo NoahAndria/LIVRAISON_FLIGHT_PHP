@@ -18,6 +18,7 @@ $router->group('', function(Router $router) use ($app) {
 	// 	$app->render('welcome', [ 'products' => $controller->getProducts()]);
 	// });
 	$router->get('/', [ ApiExampleController::class, 'getProducts' ]);
+	$router->get('/ajout_livraison', [ LivraisonController::class, 'getProducts' ]);
 	$router->get('/delete/@id:[0-9]+', [ ApiExampleController::class, 'delete' ]);
 	$router->get('/redirectupdate/@id:[0-9]+', [ ApiExampleController::class, 'r_update' ]);
 	$router->get('/hello-world/@name', function($name) {
@@ -41,9 +42,7 @@ $router->group('', function(Router $router) use ($app) {
 	$router->get('/add', function() use ($app) {
 		$app->render('add');
 	});
-	$router->get('/ajout_livraison', function() use ($app) {
-		$app->render('ajout_livraison');
-	});
+
 	$router->group('/api', function() use ($router) {
 		$router->get('/users', [ ApiExampleController::class, 'getUsers' ]);
 		$router->get('/users/@id:[0-9]', [ ApiExampleController::class, 'getUser' ]);

@@ -4,8 +4,7 @@ class Produit {
 	private int $id;
 	private string $nom;
 	private float $prix;
-	private string $img = "defaultimage.";
-	private string $desc;
+	private string $img;
 
 	
     public function getProducts($db) {
