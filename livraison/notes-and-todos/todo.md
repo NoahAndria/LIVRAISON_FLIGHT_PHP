@@ -16,8 +16,8 @@
   -  [wip] creation de livraison [fitiavana]
     - coli: ajout de +eurs produits
      -> liste de tous les produits (quantite + ajouter au coli)
-    - entrepot depart: dropdown
-    - adr_destination: input text
+    - entrepot depart: dropdown [wip]
+    - adr_destination: input text [ok]
     - etat: automatiquement en attente a la creation
     - voiture: input text
     - chauffeur: dropdown
@@ -29,8 +29,10 @@
     - affichage de tous les produits
     - avec les autres details (entrepot, adr_destination, etat)
 - fonctions:
+  - getAllEntrepots
   - getAllProducts [fitiavana]
   - getAllLivraison [noah]
   - saveLivraison [fitiavana]
   - modifyLivraison [noah]
   - getAllProductsOfIdColi [fitiavana]
+  - getProductById [fitiavana]

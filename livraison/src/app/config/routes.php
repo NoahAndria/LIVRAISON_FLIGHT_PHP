@@ -1,6 +1,7 @@
 <?php
 
 use app\controllers\ApiExampleController;
+use app\controllers\LivraisonController;
 use app\middlewares\SecurityHeadersMiddleware;
 use flight\Engine;
 use flight\net\Router;
@@ -24,7 +25,6 @@ $router->group('', function(Router $router) use ($app) {
 	$router->get('/hello-world/@name', function($name) {
 		echo '<h1>Hello world! Oh hey '.$name.'!</h1>';
 	});
-	
 	$router->get('/produit/@id:[0-9]', [ ApiExampleController::class, 'getProduct' ]);
 	
 	// $router->post('/addhandler', function() use ($app) {
