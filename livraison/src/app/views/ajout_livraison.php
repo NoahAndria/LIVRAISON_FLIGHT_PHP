@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </div>
-                <div class="card-footer d-flex justify-content-between bg-light product-card" id="div-product<?= $p['id'] ?>">
+                <div class="card-footer d-flex justify-content-between bg-light" id="div-product<?= $p['id'] ?>">
                     <button class="btn btn-primary btn-sm product-button" data-id="<?= $p['id'] ?>">+</button>
                     <button class="btn btn-primary btn-sm delete-product-button" data-id="<?= $p['id'] ?>">-</button>
                 </div>
@@ -36,44 +36,30 @@
             }?>
         </div>
         <div class="col">
-            <form id="form-livraison">
+            <form action="" id="form-livraison">
                 <label for="entrepot_depart">Entrepot depart</label>
-                <select name="id_entrepot" id="">
-                    <?php foreach($entrepots as $entrepot) {
-                        ?>
-                            <option value="<?= $entrepot['id'] ?>"><?= $entrepot['adr_entrepot'] ?></option>
-                        <?php
-                    } ?>
+                <select name="" id="">
+                    <!-- getEntrepot -->
                 </select>
                 <label for="adr_destination">Adresse destination</label>
                 <input type="text" name="adr_destination">
                 <label for="voiture">Voiture</label>
                 <input type="text" name="voiture">
-                <label for="chauffeur">Chauffeur</label>
-                <select name="id_chauffeur">
-                    <?php foreach($chauffeurs as $chauffeur) {
-                        ?>
-                            <option value="<?= $chauffeur['id'] ?>"><?= $chauffeur['nom'] ?></option>
-                        <?php
-                    } ?>
-                </select>
-                <label for="salaire">Salaire chauffeur</label>
-                <input type="number" name="salaire_chauffeur" id="">
                 <label for="date_livraison">Date livraison</label>
                 <input type="date" name="date_livraison" id="">
                 <button type="submit">Commencer livraison</button>
             </form>
-            <!-- <div id="added-products">
+            <div id="added-products">
                 <h3>Produits ajoute au coli: </h3>
                 <div id="div-product">
                     <p>
                         <span id="quantity"></span>
                     </p>
                 </div>
-            </div> -->
+            </div>
         </div>
     </div>
-    <script src="/js/script-livraison.js" type="text/javascript" nonce="<?= htmlspecialchars($nonce)?>">
+    <script src="/js/script-livraison.js" type="text/javascript" nonce="<?= htmlspecialchars($nonce) ?>">
     </script>
 </body>
 </html>
