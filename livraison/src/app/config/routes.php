@@ -9,7 +9,7 @@ use flight\net\Router;
 /** 
  * @var Router $router 
  * @var Engine $app
- */
+*/
 
 // This wraps all routes in the group with the SecurityHeadersMiddleware
 $router->group('', function(Router $router) use ($app) {
@@ -19,13 +19,15 @@ $router->group('', function(Router $router) use ($app) {
 	// 	$app->render('welcome', [ 'products' => $controller->getProducts()]);
 	// });
 	$router->get('/', [ ApiExampleController::class, 'getProducts' ]);
-	$router->get('/ajout_livraison', [ LivraisonController::class, 'getProducts' ]);
+	$router->get('/ajout_livraison', [ LivraisonController::class, 'passVariables' ]);
 	$router->get('/delete/@id:[0-9]+', [ ApiExampleController::class, 'delete' ]);
 	$router->get('/redirectupdate/@id:[0-9]+', [ ApiExampleController::class, 'r_update' ]);
 	$router->get('/hello-world/@name', function($name) {
 		echo '<h1>Hello world! Oh hey '.$name.'!</h1>';
 	});
 	$router->get('/produit/@id:[0-9]', [ ApiExampleController::class, 'getProduct' ]);
+	$router->post('/traitement_livraison', [ LivraisonController::class, 'handleLivraison' ]);
+	
 	
 	// $router->post('/addhandler', function() use ($app) {
 	// 	$req = Flight::request();

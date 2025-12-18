@@ -13,20 +13,20 @@
     - adr_destination
     - etat
     - nombre de produits dans le coli
-  -  [wip] creation de livraison [fitiavana]
-    - coli: ajout de +eurs produits
-     -> liste de tous les produits (quantite + ajouter au coli)
-    - entrepot depart: dropdown [wip]
+  -  [ok] creation de livraison [fitiavana]
+    - coli: ajout de +eurs produits [ok]
+     -> liste de tous les produits (quantite + ajouter au coli) [ok]
+    - entrepot depart: dropdown [ok]
     - adr_destination: input text [ok]
-    - etat: automatiquement en attente a la creation
-    - voiture: input text
-    - chauffeur: dropdown
-    - salaire_chauffeur
-    - date_livraison (arrivee au destinataire)
+    - etat: automatiquement en attente a la creation [ok]
+    - voiture: input text [ok]
+    - chauffeur: dropdown [ok]
+    - salaire_chauffeur [ok]
+    - date_livraison (arrivee au destinataire) [ok]
     - masse: automatiquement calcule de la somme des masses des produits
   - modification d'etat de livraison: en attente -> livre ou annule (~ suppression) [noah]
-  - details livraisons [fitiavana]
-    - affichage de tous les produits
+  - details livraisons [fitiavana] [todonext]
+    - affichage de tous les produits dans le coli avec leur quantite
     - avec les autres details (entrepot, adr_destination, etat)
 - fonctions:
   - getAllEntrepots
