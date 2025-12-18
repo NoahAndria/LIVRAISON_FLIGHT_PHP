@@ -146,7 +146,6 @@ class Engine
      * @throws Exception
      * @return mixed Callback results
      */
-
     public function __call(string $name, array $params)
     {
         $callback = $this->dispatcher->get($name);
@@ -230,7 +229,7 @@ class Engine
 
         $this->initialized = true;
     }
-
+    
     /**
      * Custom error handler. Converts errors into exceptions.
      *

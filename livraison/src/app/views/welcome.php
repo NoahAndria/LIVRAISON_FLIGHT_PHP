@@ -20,27 +20,38 @@
     </header>
 
     <main>
-        <h1>Bienvenue sur notre boutique</h1>
+        <h1>Liste des livraisons</h1>
         <section class="product-list">
-        <?php 
-            // echo sizeof($products);
-            // var_dump($products);
-            foreach($products as $product) {
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre de produits</th>
+                        <th>Adresse Entrepot</th>
+                        <th>Adresse Destination</th>
+                        <th>Etat</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+        <tbody>
+        <?php
+            foreach($liste_livraison as $livraison) {
         ?>
-
-            <article class="product-card">
-                <a href="produit/<?= $product['id'] ?>">
-                    <img src="./images/<?= $product['img']?>" alt="<?= $product['nom']?>">
-                    <h2><?= $product['nom']?></h2>
-                    <p>Prix : <?= $product['prix']?> Ar</p>
-                    <a href="delete/<?= $product['id'] ?>">Delete</a>
-                    <a href="redirectupdate/<?= $product['id'] ?>">Update</a>
-                </a>
-            </article>
+            <tr>
+                <td><?= $livraison['id_livraison'];?></td>
+                <td><?= LivraisonDAO::compteColi($livraison['id_livraison']); ?></td>
+                <td><?= $livraison['adr_entrepot'];?></td>
+                <td><?= $livraison['adr_destination'];?></td>
+                <td><?= $livraison['desc_etat'];?></td>
+                <td><a href="<?= Flight::request()->getBaseUrl() ?>/modif/<?= $livraison['id_livraison']?>">Modifier</a></td>
+            </tr>
             <?php
             }
         ?>
+        </tbody>
+
             <!-- Ajoutez d'autres produits ici -->
+            </table>
         </section>
     </main>
     <footer>
