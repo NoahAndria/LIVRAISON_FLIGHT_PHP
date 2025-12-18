@@ -8,16 +8,16 @@ create table Produit (
     img varchar(100) default 'default.png',
     masse float
 );
-create table Livraison_coli (
-    id int primary key auto_increment,
-    id_entrepot_depart int,
-    adr_destination varchar(100),   
-    id_etat int default 1, 
-    voiture varchar(20),
-    id_chauffeur int,
-    salaire_chauffeur float,
-    date_livraison datetime
-);
+    create table Livraison_coli (
+        id int primary key auto_increment,
+        id_entrepot_depart int,
+        adr_destination varchar(100),   
+        id_etat int default 1, 
+        voiture varchar(20),
+        id_chauffeur int,
+        salaire_chauffeur float,
+        date_livraison datetime
+    );
 create table Produits_coli (
     id int primary key auto_increment,
     id_produit int,
@@ -70,3 +70,21 @@ INSERT INTO Livraison_coli (id_entrepot_depart, adr_destination, id_etat) VALUES
 (8, '19 Rue de la Paix, 06000 Nice', 1),
 (2, '88 Avenue Jean Jaurès, 31000 Toulouse', 2),
 (5, '55 Rue de Rivoli, 75004 Paris', 3);
+
+-- resetting table Livraison_coli and Produits_coli 
+delete from Livraison_coli;
+delete from Produits_coli;
+alter table Livraison_coli auto_increment = 1;
+alter table Produits_coli auto_increment = 1;
+
+INSERT INTO Chauffeur (nom) VALUES
+('Martin Dupont'),
+('Sophie Laurent'),
+('Thomas Moreau'),
+('Julie Bernard'),
+('Pierre Dubois'),
+('Marie Leroy'),
+('Jean Petit'),
+('Camille Richard'),
+('David Simon'),
+('Laura Michel');
