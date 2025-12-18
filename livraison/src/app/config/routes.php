@@ -75,5 +75,17 @@ $router->group('', function(Router $router) use ($app) {
 	});
 	$update_controller = new UpdateController();
 	$router->get('/traiteModif', [ $update_controller, 'UploadState' ]);
+	
+		$router->get('/listebenefice', function() use ($app) {
+		$app->render('liste_benefice');
+		});
 
+	
+	
+			$router->get('/listebenefice/recherche', function() use ($app) {
+		// $app->render('list_benefice',);
+		$livraison_controller = new LivraisonController($app);
+		$livraison_controller->searchBenefit();
+		});
+		
 }, [ SecurityHeadersMiddleware::class ]);

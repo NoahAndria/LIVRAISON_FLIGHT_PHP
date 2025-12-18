@@ -14,6 +14,7 @@
                 <ul class="menu">
                     <li><a href="#">Accueil</a></li>
                     <li><a href="/ajout_livraison">Add livraison</a></li>
+                    <li><a href="/listebenefice">Liste benefice</a></li>
                 </ul>
             </nav>
         </div>

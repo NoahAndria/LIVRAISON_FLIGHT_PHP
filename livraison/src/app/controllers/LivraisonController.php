@@ -67,5 +67,15 @@ class LivraisonController {
             echo json_encode(["status" => "failure"]);
         }
     }
+    
+        public function searchBenefit(){
+        $req = Flight::request();
+        var_dump($req->query);
+        // $state_int = (int)$req->query['etat'];
+        // $livraison_id = (int)$req->query['id'];
+        // $livraison_dao = new LivraisonDAO(Flight::db());
+        // $livraison_dao->updateState($livraison_id, $state_int);
+        // Flight::redirect('/');
+    }
 }
 ?>
